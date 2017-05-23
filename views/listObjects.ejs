@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <!-- The background image is a component used for the style of the page so goes in the style tag-->
+
+   <link rel= "stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  
+   <!-- we are modifying the body style by adding a background image -->
+
+   </head>
+   <body>
+   
+   <div class="about">
+   <header>
+   	<nav class="navbar navbar-inverse">
+   	 <ul class="nav navbar-nav">
+   	 	<li><a href="/">Home</a></li>
+   	 	<li><a href="/list">View Files</a></li>
+   	 </ul>
+   	 </nav>
+   </header> 
+<h1 align="center"> Cloud Box </h1>
+	
+    <div align="center">
+         <img src="http://www.makbusiness.ca/wp-content/uploads/2016/03/cloud.png" style="width:500px;height:300px; class= "titlepic"/>
+    
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<table>
+  <tr>
+    <th>File Name</th>
+  </tr>
+   <% for (var i in urlArr){ %>
+    <tr>
+    <!--<img src="<%=urlArr[i]%>" style="width:304px;height:228px;">  -->
+    <td><a href="<%= abc[i] %>"><%=urlArr[i].Key %></a></td>
+    <td><a href="/delete?fileName=<%=urlArr[i].Key %>">Delete</td>
+    <br>
+    <% }%>
+    </tr>
+   </table>
+   </div>
+   </div>
+   
+   </body>
+</html>
+    
+   
+   
+   
+   
+    
+  </body>
+</html>
